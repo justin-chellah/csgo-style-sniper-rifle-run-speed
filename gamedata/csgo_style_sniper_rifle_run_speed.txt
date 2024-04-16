@@ -1,0 +1,32 @@
+"Games"
+{
+    "left4dead2"
+    {
+        "Offsets"
+        {
+            "CTerrorPlayer::IsZoomed"
+            {
+                "windows"   "577"
+                "linux"     "579"
+            }
+
+            "CCSPlayer::GetHealthBuffer"
+            {
+                "windows"   "504"
+                "linux"     "505"
+            }
+        }
+
+        "Signatures"
+        {
+            "CTerrorPlayer::GetRunTopSpeed"
+            {
+                "library"   "server"
+                "windows"   "\x55\x8B\xEC\x83\xEC\x10\x56\x8B\xF1\x8B\x06\x8B\x90\x54\x05\x00\x00"
+                // 55 8B EC 83 EC 10 56 8B F1 8B 06 8B 90 54 05 00 00
+
+                "linux"     "@_ZNK13CTerrorPlayer14GetRunTopSpeedEv"
+            }
+        }
+    }
+}
